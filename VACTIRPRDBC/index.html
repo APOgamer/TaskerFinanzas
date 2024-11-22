@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador de Proyectos - VAN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Comparador de Proyectos - VAN (NPV)</h1>
+        
+        <div class="proyecto-container" id="proyecto-actual">
+            <div class="proyecto-header">
+                <div class="input-group">
+                    <label>Nombre del Proyecto:</label>
+                    <input type="text" id="nombre-proyecto" placeholder="Proyecto A">
+                </div>
+                
+                <div class="input-group">
+                    <label>Inversión Inicial (Flujo 0):</label>
+                    <input type="number" id="flujo0" step="0.01" placeholder="-18600">
+                </div>
+
+                <div class="input-group">
+                    <label>Tasa de Interés Efectiva (%):</label>
+                    <input type="number" id="tasa" step="0.01" placeholder="9.42">
+                </div>
+            </div>
+
+            <div id="flujos-container">
+                <!-- Aquí se agregarán dinámicamente los flujos -->
+            </div>
+
+            <button id="agregarFlujo">+ Agregar Flujo</button>
+            <button id="calcular">Calcular VAN</button>
+        </div>
+
+        <button id="nuevoProyecto" class="nuevo-proyecto">+ Nuevo Proyecto</button>
+
+        <div id="comparacion" class="comparacion">
+            <h2>Comparación de Proyectos</h2>
+            <div id="lista-proyectos"></div>
+            <div id="mejor-proyecto" class="mejor-proyecto"></div>
+        </div>
+    </div>
+    <script src="tir.js"></script>
+    <script src="bc.js"></script>
+    <script src="prd.js"></script>
+    <script src="analisis_sensibilidad.js"></script>
+    <script src="analisis_tasa_corte.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
